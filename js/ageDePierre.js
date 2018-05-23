@@ -31,9 +31,9 @@ function nouveauInput(){
 
 window.onload = function() { 
 	nouveauInput()
-
+	document.getElementsByName('tbNom1')[0].value = "Cindy"
 	nouveauInput()
-  
+  	document.getElementsByName('tbNom2')[0].value = "Elise"
 };
 
 

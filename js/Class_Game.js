@@ -53,43 +53,44 @@ class Game{
 		$('body').append("<h3> L'inventaire </h3> ")
 		let lesRessources = this.getRessources() ; 
 
-
+		$('.btn').click({player: 'rouge'}, this.changeColor) ; 
 	}
 
 	createHutte(){
 		let tableau
 		tableau =" <table> <tr> <th> La hutte de l'amour </th> </tr> "
-		tableau += "<tr> <td>  <input type='button' value=' ' id='Emplacement1' onclick='changeColor()'/> </td> "
-		tableau += "<td>  <input type='button' value=' ' id='Emplacement2' onclick='changeColor()'/> </td> </tr>"
+		tableau += "<tr> <td>  <input  class='btn' type='button' value=' ' id='Emplacement1' /> </td> "
+		tableau += "<td>  <input class='btn' type='button' value=' ' id='Emplacement2' /> </td> </tr>"
 		tableau += "</table>"
-		$('body').append( tableau)
+		$('body').append( tableau);
 	}
 
 	createZoneWood(){
 		let tableau
 		tableau =" <table> <tr> <th> Bois </th> </tr> "
-		tableau += "<tr> <td>  <input type='button' value=' ' id='Emplacement1'/> </td> "
-		tableau += "<td>  <input type='button' value=' ' id='Emplacement2'/> </td> "
-		tableau += "<td>  <input type='button' value=' ' id='Emplacement3'/> </td> </tr>"
-		tableau += "<tr> <td>  <input type='button' value=' ' id='Emplacement4'/> </td> "
-		tableau += "<td>  <input type='button' value=' ' id='Emplacement5'/> </td> "
-		tableau += "<td>  <input type='button' value=' ' id='Emplacement6'/> </td> </tr>"
-		tableau += "<tr> <td>  <input type='button' value=' ' id='Emplacement7'/> </td> </tr>"
+		tableau += "<tr> <td>  <input class='btn' type='button' value=' ' id='Emplacement1'/> </td> "
+		tableau += "<td>  <input class='btn' type='button' value=' ' id='Emplacement2'/> </td> "
+		tableau += "<td>  <input  class='btn' type='button' value=' ' id='Emplacement3'/> </td> </tr>"
+		tableau += "<tr> <td>  <input class='btn' type='button' value=' ' id='Emplacement4'/> </td> "
+		tableau += "<td>  <input class='btn' type='button' value=' ' id='Emplacement5'/> </td> "
+		tableau += "<td>  <input  class='btn'type='button' value=' ' id='Emplacement6'/> </td> </tr>"
+		tableau += "<tr> <td>  <input   class='btn' type='button' value=' ' id='Emplacement7'/> </td> </tr>"
 		tableau += "</table>"
 		$('body').append( tableau)
+
 
 	}
 
 	createZoneGold(){
 		let tableau
 		tableau =" <table> <tr> <th> Or </th> </tr> "
-		tableau += "<tr> <td>  <input type='button' value=' ' id='Emplacement1'/> </td> "
-		tableau += "<td>  <input type='button' value=' ' id='Emplacement2'/> </td> "
-		tableau += "<td>  <input type='button' value=' ' id='Emplacement3'/> </td> </tr>"
-		tableau += "<tr> <td>  <input type='button' value=' ' id='Emplacement4'/> </td> "
-		tableau += "<td>  <input type='button' value=' ' id='Emplacement5'/> </td> "
-		tableau += "<td>  <input type='button' value=' ' id='Emplacement6'/> </td> </tr>"
-		tableau += "<tr> <td>  <input type='button' value=' ' id='Emplacement7'/> </td> </tr>"
+		tableau += "<tr> <td>  <input class='btn' type='button' value=' ' id='Emplacement1'/> </td> "
+		tableau += "<td>  <input class='btn' type='button' value=' ' id='Emplacement2'/> </td> "
+		tableau += "<td>  <input class='btn' type='button' value=' ' id='Emplacement3'/> </td> </tr>"
+		tableau += "<tr> <td>  <input class='btn' type='button' value=' ' id='Emplacement4'/> </td> "
+		tableau += "<td>  <input class='btn' type='button' value=' ' id='Emplacement5'/> </td> "
+		tableau += "<td>  <input class='btn' type='button' value=' ' id='Emplacement6'/> </td> </tr>"
+		tableau += "<tr> <td>  <input class='btn' type='button' value=' ' id='Emplacement7'/> </td> </tr>"
 		tableau += "</table>"
 		$('body').append( tableau)
 
@@ -98,13 +99,13 @@ class Game{
 	createZoneBrick(){
 		let tableau
 		tableau =" <table> <tr> <th> Brique </th> </tr> "
-		tableau += "<tr> <td>  <input type='button' value=' ' id='Emplacement1'/> </td> "
-		tableau += "<td>  <input type='button' value=' ' id='Emplacement2'/> </td> "
-		tableau += "<td>  <input type='button' value=' ' id='Emplacement3'/> </td> </tr>"
-		tableau += "<tr> <td>  <input type='button' value=' ' id='Emplacement4'/> </td> "
-		tableau += "<td>  <input type='button' value=' ' id='Emplacement5'/> </td> "
-		tableau += "<td>  <input type='button' value=' ' id='Emplacement6'/> </td> </tr>"
-		tableau += "<tr> <td>  <input type='button' value=' ' id='Emplacement7'/> </td> </tr>"
+		tableau += "<tr> <td>  <input class='btn' type='button' value=' ' id='Emplacement1'/> </td> "
+		tableau += "<td>  <input class='btn' type='button' value=' ' id='Emplacement2'/> </td> "
+		tableau += "<td>  <input class='btn' type='button' value=' ' id='Emplacement3'/> </td> </tr>"
+		tableau += "<tr> <td>  <input class='btn' type='button' value=' ' id='Emplacement4'/> </td> "
+		tableau += "<td>  <input class='btn' type='button' value=' ' id='Emplacement5'/> </td> "
+		tableau += "<td>  <input class='btn' type='button' value=' ' id='Emplacement6'/> </td> </tr>"
+		tableau += "<tr> <td>  <input class='btn' type='button' value=' ' id='Emplacement7'/> </td> </tr>"
 		tableau += "</table>"
 		$('body').append( tableau)
 
@@ -114,12 +115,12 @@ class Game{
 		let tableau
 		tableau =" <table> <tr> <th> Pierre </th> </tr> "
 		tableau += "<tr> <td>  <input type='button' value=' ' id='Emplacement1'/> </td> "
-		tableau += "<td>  <input type='button' value=' ' id='Emplacement2'/> </td> "
-		tableau += "<td>  <input type='button' value=' ' id='Emplacement3'/> </td> </tr>"
-		tableau += "<tr> <td>  <input type='button' value=' ' id='Emplacement4'/> </td> "
-		tableau += "<td>  <input type='button' value=' ' id='Emplacement5'/> </td> "
-		tableau += "<td>  <input type='button' value=' ' id='Emplacement6'/> </td> </tr>"
-		tableau += "<tr> <td>  <input type='button' value=' ' id='Emplacement7'/> </td> </tr>"
+		tableau += "<td>  <input class='btn' type='button' value=' ' id='Emplacement2'/> </td> "
+		tableau += "<td>  <input class='btn' type='button' value=' ' id='Emplacement3'/> </td> </tr>"
+		tableau += "<tr> <td>  <input class='btn' type='button' value=' ' id='Emplacement4'/> </td> "
+		tableau += "<td>  <input class='btn' type='button' value=' ' id='Emplacement5'/> </td> "
+		tableau += "<td>  <input class='btn' type='button' value=' ' id='Emplacement6'/> </td> </tr>"
+		tableau += "<tr> <td>  <input class='btn' type='button' value=' ' id='Emplacement7'/> </td> </tr>"
 		tableau += "</table>"
 		$('body').append( tableau)
 
@@ -129,12 +130,12 @@ class Game{
 		let tableau
 		tableau =" <table> <tr> <th> Ferme  </th> </tr> "
 		tableau += "<tr> <td>  <input type='button' value=' ' id='Emplacement1'/> </td> "
-		tableau += "<td>  <input type='button' value=' ' id='Emplacement2'/> </td> "
-		tableau += "<td>  <input type='button' value=' ' id='Emplacement3'/> </td> </tr>"
-		tableau += "<tr> <td>  <input type='button' value=' ' id='Emplacement4'/> </td> "
-		tableau += "<td>  <input type='button' value=' ' id='Emplacement5'/> </td> "
-		tableau += "<td>  <input type='button' value=' ' id='Emplacement6'/> </td> </tr>"
-		tableau += "<tr> <td>  <input type='button' value=' ' id='Emplacement7'/> </td> </tr>"
+		tableau += "<td>  <input class='btn' type='button' value=' ' id='Emplacement2'/> </td> "
+		tableau += "<td>  <input class='btn' type='button' value=' ' id='Emplacement3'/> </td> </tr>"
+		tableau += "<tr> <td>  <input class='btn' type='button' value=' ' id='Emplacement4'/> </td> "
+		tableau += "<td>  <input class='btn' type='button' value=' ' id='Emplacement5'/> </td> "
+		tableau += "<td>  <input class='btn' type='button' value=' ' id='Emplacement6'/> </td> </tr>"
+		tableau += "<tr> <td>  <input class='btn' type='button' value=' ' id='Emplacement7'/> </td> </tr>"
 		tableau += "</table>"
 		$('body').append( tableau)
 
@@ -143,7 +144,7 @@ class Game{
 	createZoneTools(){
 		let tableau
 		tableau =" <table> <tr> <th> Outil  </th> </tr> "
-		tableau += "<tr> <td>  <input type='button' value=' ' id='Emplacement1'/> </td></tr> "	
+		tableau += "<tr> <td>  <input class='btn' type='button' value=' ' id='Emplacement1'/> </td></tr> "	
 		tableau += "</table>"
 		$('body').append( tableau)
 	} 
@@ -152,14 +153,19 @@ class Game{
 	createZoneProperty(){
 		let tableau
 		tableau =" <table> <tr> <th> Batiments  </th> </tr> "
-		tableau += "<tr> <td>  <input type='button' value=' ' id='Emplacement1'/> </td></tr> "	
+		tableau += "<tr> <td>  <input class='btn' type='button' value=' ' id='Emplacement1'/> </td></tr> "	
 		tableau += "</table>"
 		$('body').append( tableau)
 	} 
 
 
-	 changeColor(){
-		alert('déposer un homme dans la hutte ?')
+	 changeColor(event){
+		$('.btn').click(function(){
+  		var id = $(this).attr("id");
+  		let couleur = event.player ; 
+  		$(this).css('background-color', couleur);
+  			alert(id);
+});
 	}
 
 
